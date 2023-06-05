@@ -1,0 +1,16 @@
+<ul>
+  <li>{{ devSample.firstName }}</li>
+  <li>{{ devSample.lastName }}</li>
+  <li>{{ devSample.age }}</li>
+  <li>{{ devSample.gender }}</li>
+  <li>{{ devSample.bio }}</li>
+  <li>
+    <!-- Pour chaque skill, afficher le composant <app-skill> -->
+    <app-skill
+      *ngFor="let skillItem of devSample.skills"
+      [name]="skillItem.name"
+      [logo]="skillItem.logo"
+      [site]="skillItem.site"
+    ></app-skill>
+  </li>
+</ul>
